@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".details.ToDoDetailsFragment">
+
+    <TextView
+        android:id="@+id/record_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Hello Title" />
+
+    <TextView
+        android:id="@+id/record_desc_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/record_title_view"
+        android:text="Hello Details" />
+
+    <Switch
+        android:id="@+id/to_do_done_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/record_desc_view">
+
+    </Switch>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_do_done_switch"
+        android:text="Is This Was Done"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

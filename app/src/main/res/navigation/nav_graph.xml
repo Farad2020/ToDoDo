@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/toDoListFragment">
+
+    <fragment
+        android:id="@+id/toDoListFragment"
+        android:name="com.example.tododo.mainList.ToDoListFragment"
+        android:label="ToDoListFragment"
+        app:startDestination="@id/action_toDoListFragment_to_toDoDetailsFragment">
+        <action
+            android:id="@+id/action_toDoListFragment_to_toDoDetailsFragment"
+            app:destination="@id/toDoDetailsFragment" />
+        <action
+            android:id="@+id/action_toDoListFragment_to_addToDoFragment2"
+            app:destination="@id/addToDoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toDoDetailsFragment"
+        android:name="com.example.tododo.details.ToDoDetailsFragment"
+        android:label="to_do_details_fragment"
+        tools:layout="@layout/to_do_details_fragment" >
+        <argument
+            android:name="record_title"
+            app:argType="string" />
+        <argument
+            android:name="record_description"
+            app:argType="string" />
+        <argument
+            android:name="record_is_checked"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToDoFragment"
+        android:name="com.example.tododo.addToDo.AddToDoFragment"
+        android:label="AddToDoFragment" >
+        <action
+            android:id="@+id/action_addToDoFragment_to_toDoListFragment"
+            app:destination="@id/toDoListFragment" />
+    </fragment>
+</navigation>
